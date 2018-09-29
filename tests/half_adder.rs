@@ -1,3 +1,4 @@
+// logic_gates/tests/half_adder.rs
 
 extern crate logic_gates;
 
@@ -6,7 +7,6 @@ use logic_gates::{and, xor};
 pub type Sum = u8;
 pub type Carry = u8;
 
-// First part of
 pub fn half_adder_input_output() -> Vec<((u8, u8), (Sum, Carry))> { 
     vec![
         ((0, 0), (0, 0)), 
@@ -16,9 +16,9 @@ pub fn half_adder_input_output() -> Vec<((u8, u8), (Sum, Carry))> {
     ] 
 }
 
-/// This function implements a half adder using basic gates
+/// This function implements a half adder using primitive gates
 fn half_adder(a: u8, b: u8) -> (Sum, Carry) {
-    (xor(a,b), and(a,b))
+    (xor(a, b), and(a, b))
 }
 
 #[test]
